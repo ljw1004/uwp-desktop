@@ -1,0 +1,17 @@
+﻿<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>UwpDesktop</id>
+    <version>10.0.10240.0</version>
+    <title>UWP for Desktop</title>
+    <authors>Lucian Wischik</authors>
+    <owners>Lucian Wischik</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://github.com/ljw1004/uwp-desktop/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/ljw1004/uwp-desktop/blob/master/README.md</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/ljw1004/blog/master/uwp-desktop.png</iconUrl>
+    <description>Lets you call into UWP APIs from Desktop apps (WPF, WinForms, Console, ...)</description>
+    <summary>Lets you call into UWP APIs from Desktop apps</summary>
+    <tags>UWP Win10 winrt UAP</tags>
+  </metadata>
+</package>
