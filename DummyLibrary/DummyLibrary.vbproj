@@ -84,6 +84,10 @@
   <ItemGroup>
     <Compile Include="Class1.vb" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="uwp-desktop-10240.nuspec" />
+    <None Include="uwp-desktop-10240.targets" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.VisualBasic.targets" />
   <Target Name="BeforeBuild">
   </Target>
