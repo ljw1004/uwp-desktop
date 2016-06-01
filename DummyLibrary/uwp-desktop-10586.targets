@@ -16,19 +16,19 @@
       <HintPath>$(MSBuildProgramFiles32)\Windows Kits\10\References\Windows.ApplicationModel.Calls.CallsVoipContract\1.0.0.0\Windows.ApplicationModel.Calls.CallsVoipContract.winmd</HintPath>
     </Reference>
     <Reference Include="Windows.Devices.Printers.PrintersContract">
-      <HintPath>$(MSBuildProgramFiles32)\Windows Kits\10\References\Windows.Devices.Printers.PrintersContract\1.0.0.0  \Windows.Devices.Printers.PrintersContract.winmd</HintPath>
+      <HintPath>$(MSBuildProgramFiles32)\Windows Kits\10\References\Windows.Devices.Printers.PrintersContract\1.0.0.0\Windows.Devices.Printers.PrintersContract.winmd</HintPath>
     </Reference>
     <Reference Include="Windows.Foundation.FoundationContract">
-      <HintPath>$(MSBuildProgramFiles32)\Windows Kits\10\References\Windows.Foundation.FoundationContract\2.0.0.0  \Windows.Foundation.FoundationContract.winmd</HintPath>
+      <HintPath>$(MSBuildProgramFiles32)\Windows Kits\10\References\Windows.Foundation.FoundationContract\2.0.0.0\Windows.Foundation.FoundationContract.winmd</HintPath>
     </Reference>
     <Reference Include="Windows.Foundation.UniversalApiContract">
-      <HintPath>$(MSBuildProgramFiles32)\Windows Kits\10\References\Windows.Foundation.UniversalApiContract\2.0.0.0  \Windows.Foundation.UniversalApiContract.winmd</HintPath>
+      <HintPath>$(MSBuildProgramFiles32)\Windows Kits\10\References\Windows.Foundation.UniversalApiContract\2.0.0.0\Windows.Foundation.UniversalApiContract.winmd</HintPath>
     </Reference>
     <Reference Include="Windows.Graphics.Printing3D.Printing3DContract">
-      <HintPath>$(MSBuildProgramFiles32)\Windows Kits\10\References\Windows.Graphics.Printing3D.Printing3DContract\2.0.0.0   \Windows.Graphics.Printing3D.Printing3DContract.winmd</HintPath>
+      <HintPath>$(MSBuildProgramFiles32)\Windows Kits\10\References\Windows.Graphics.Printing3D.Printing3DContract\2.0.0.0\Windows.Graphics.Printing3D.Printing3DContract.winmd</HintPath>
     </Reference>
     <Reference Include="Windows.Networking.Connectivity.WwanContract">
-      <HintPath>$(MSBuildProgramFiles32)\Windows Kits\10\References\Windows.Networking.Connectivity.WwanContract\1.0.0.0  \Windows.Networking.Connectivity.WwanContract.winmd</HintPath>
+      <HintPath>$(MSBuildProgramFiles32)\Windows Kits\10\References\Windows.Networking.Connectivity.WwanContract\1.0.0.0\Windows.Networking.Connectivity.WwanContract.winmd</HintPath>
     </Reference>
     <Reference Include="Windows.ApplicationModel.Activation.ActivatedEventsContract">
       <HintPath>$(MSBuildProgramFiles32)\Windows Kits\10\References\Windows.ApplicationModel.Activation.ActivatedEventsContract\1.0.0.0\Windows.ApplicationModel.Activation.ActivatedEventsContract.winmd</HintPath>
@@ -157,7 +157,7 @@
       <HintPath>$(MSBuildProgramFiles32)\Windows Kits\10\References\Windows.UI.Xaml.Hosting.HostingContract\1.0.0.0\Windows.UI.Xaml.Hosting.HostingContract.winmd</HintPath>
     </Reference>
     <Reference Include="Windows.Web.Http.Diagnostics.HttpDiagnosticsContract">
-      <HintPath>$(MSBuildProgramFiles32)\Windows Kits\10\References\Windows.Web.Http.Diagnostics.HttpDiagnosticsContract\1.0.0.0\Windows.Web.Http.Diagnostics.HttpDiagnosticsContract</HintPath>
+      <HintPath>$(MSBuildProgramFiles32)\Windows Kits\10\References\Windows.Web.Http.Diagnostics.HttpDiagnosticsContract\1.0.0.0\Windows.Web.Http.Diagnostics.HttpDiagnosticsContract.winmd</HintPath>
     </Reference>
   </ItemGroup>
 
