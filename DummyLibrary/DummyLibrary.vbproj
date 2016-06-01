@@ -11,7 +11,7 @@
     <AssemblyName>DummyLibrary</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <ProjectTypeGuids>{14182A97-F7F0-4C62-8B27-98AA8AE2109A};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
-    <TargetFrameworkProfile>Profile46</TargetFrameworkProfile>
+    <TargetFrameworkProfile>Profile47</TargetFrameworkProfile>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -85,6 +85,9 @@
     <Compile Include="Class1.vb" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="uwp-desktop-10586.targets" />
+    <None Include="uwp-desktop-10586.nuspec" />
     <None Include="uwp-desktop-10240.nuspec" />
     <None Include="uwp-desktop-10240.targets" />
   </ItemGroup>
@@ -92,8 +95,11 @@
   <Target Name="BeforeBuild">
   </Target>
   <Target Name="AfterBuild">
-    <Copy SkipUnchangedFiles="true" SourceFiles="uwp-desktop-10240.targets" DestinationFiles="bin\$(Configuration)\nupkg\build\portable-net45+uap\UwpDesktop.targets" />
-    <Copy SkipUnchangedFiles="true" SourceFiles="uwp-desktop-10240.nuspec" DestinationFiles="bin\$(Configuration)\nupkg\UwpDesktop.nuspec" />
-    <Exec Command="..\..\..\packages\NuGet.CommandLine.2.8.6\tools\NuGet.exe pack UwpDesktop.nuspec -OutputDirectory .." WorkingDirectory="bin\$(Configuration)\nupkg" Outputs="bin\$(Configuration)\*.nupkg" />
+    <Copy SkipUnchangedFiles="true" SourceFiles="uwp-desktop-10240.targets" DestinationFiles="bin\$(Configuration)\nupkg\10240\build\portable-net45+uap\UwpDesktop.targets" />
+    <Copy SkipUnchangedFiles="true" SourceFiles="uwp-desktop-10240.nuspec" DestinationFiles="bin\$(Configuration)\nupkg\10240\UwpDesktop.nuspec" />
+    <Exec Command="..\..\..\..\packages\NuGet.CommandLine.3.4.3\tools\NuGet.exe pack UwpDesktop.nuspec -OutputDirectory ..\.." WorkingDirectory="bin\$(Configuration)\nupkg\10240" Outputs="bin\$(Configuration)\*.nupkg" />
+    <Copy SkipUnchangedFiles="true" SourceFiles="uwp-desktop-10586.targets" DestinationFiles="bin\$(Configuration)\nupkg\10586\build\portable-net45+uap\UwpDesktop.targets" />
+    <Copy SkipUnchangedFiles="true" SourceFiles="uwp-desktop-10586.nuspec" DestinationFiles="bin\$(Configuration)\nupkg\10586\UwpDesktop.nuspec" />
+    <Exec Command="..\..\..\..\packages\NuGet.CommandLine.3.4.3\tools\NuGet.exe pack UwpDesktop.nuspec -OutputDirectory ..\.." WorkingDirectory="bin\$(Configuration)\nupkg\10586" Outputs="bin\$(Configuration)\*.nupkg" />
   </Target>
 </Project>
