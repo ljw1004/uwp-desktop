@@ -32,28 +32,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="UwpDesktopAnalyzerCS.cs" />
     <Compile Include="UwpDesktopAnalyzer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UwpDesktopAnalyzerVB.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="uwp-desktop-10240.nuspec" />
-    <None Include="uwp-desktop-10240.targets" />
-    <None Include="uwp-desktop-10586.nuspec" />
-    <None Include="uwp-desktop-10586.targets" />
-    <None Include="UwpDesktopAnalyzer.nuspec">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <None Include="nupkg\uwp-desktop-10240.nuspec" />
+    <None Include="nupkg\uwp-desktop-10240.targets" />
+    <None Include="nupkg\uwp-desktop-10586.nuspec" />
+    <None Include="nupkg\uwp-desktop-10586.targets" />
     <None Include="packages.config" />
-    <None Include="tools\install.ps1">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="tools\uninstall.ps1">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <None Include="nupkg\install.ps1" />
+    <None Include="nupkg\uninstall.ps1" />
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.1.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.Analyzers.dll" />
@@ -113,12 +103,25 @@
       <Private>True</Private>
     </Reference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="nupkg\uwp-desktop.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\v4.6\Microsoft.Portable.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
   <Target Name="AfterBuild">
+    <Copy SkipUnchangedFiles="true" SourceFiles="nupkg\uwp-desktop-10240.targets" DestinationFiles="bin\$(Configuration)\nupkg\10240\build\portable-net45+uap\UwpDesktop.targets" />
+    <Copy SkipUnchangedFiles="true" SourceFiles="nupkg\uwp-desktop-10240.nuspec" DestinationFiles="bin\$(Configuration)\nupkg\10240\UwpDesktop.nuspec" />
+    <Copy SkipUnchangedFiles="true" SourceFiles="bin\$(Configuration)\UwpDesktopAnalyzer.dll" DestinationFiles="bin\$(Configuration)\nupkg\10240\analyzers\dotnet\UwpDesktopAnalyzer.dll" />
+    <Copy SkipUnchangedFiles="true" SourceFiles="nupkg\install.ps1" DestinationFiles="bin\$(Configuration)\nupkg\10240\tools\install.ps1" />
+    <Copy SkipUnchangedFiles="true" SourceFiles="nupkg\uninstall.ps1" DestinationFiles="bin\$(Configuration)\nupkg\10240\tools\uninstall.ps1" />
+    <Exec Command="..\..\..\..\..\packages\NuGet.CommandLine.3.4.3\tools\NuGet.exe pack UwpDesktop.nuspec -OutputDirectory ..\.." WorkingDirectory="bin\$(Configuration)\nupkg\10240" Outputs="bin\$(Configuration)\*.nupkg" />
+    <Copy SkipUnchangedFiles="true" SourceFiles="nupkg\uwp-desktop-10586.targets" DestinationFiles="bin\$(Configuration)\nupkg\10586\build\portable-net45+uap\UwpDesktop.targets" />
+    <Copy SkipUnchangedFiles="true" SourceFiles="nupkg\uwp-desktop-10586.nuspec" DestinationFiles="bin\$(Configuration)\nupkg\10586\UwpDesktop.nuspec" />
+    <Copy SkipUnchangedFiles="true" SourceFiles="bin\$(Configuration)\UwpDesktopAnalyzer.dll" DestinationFiles="bin\$(Configuration)\nupkg\10240\analyzers\dotnet\UwpDesktopAnalyzer.dll" />
+    <Copy SkipUnchangedFiles="true" SourceFiles="nupkg\install.ps1" DestinationFiles="bin\$(Configuration)\nupkg\10240\tools\install.ps1" />
+    <Copy SkipUnchangedFiles="true" SourceFiles="nupkg\uninstall.ps1" DestinationFiles="bin\$(Configuration)\nupkg\10240\tools\uninstall.ps1" />
+    <Copy SkipUnchangedFiles="true" SourceFiles="bin\$(Configuration)\UwpDesktopAnalyzer.dll" DestinationFiles="bin\$(Configuration)\nupkg\10586\analyzers\dotnet\UwpDesktopAnalyzer.dll" />
+    <Copy SkipUnchangedFiles="true" SourceFiles="nupkg\install.ps1" DestinationFiles="bin\$(Configuration)\nupkg\10586\tools\install.ps1" />
+    <Copy SkipUnchangedFiles="true" SourceFiles="nupkg\uninstall.ps1" DestinationFiles="bin\$(Configuration)\nupkg\10586\tools\uninstall.ps1" />
+    <Exec Command="..\..\..\..\..\packages\NuGet.CommandLine.3.4.3\tools\NuGet.exe pack UwpDesktop.nuspec -OutputDirectory ..\.." WorkingDirectory="bin\$(Configuration)\nupkg\10586" Outputs="bin\$(Configuration)\*.nupkg" />
   </Target>
-  -->
 </Project>
