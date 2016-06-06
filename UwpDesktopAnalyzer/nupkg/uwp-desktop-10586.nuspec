@@ -9,7 +9,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>https://github.com/ljw1004/uwp-desktop/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/ljw1004/uwp-desktop/blob/master/README.md</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/ljw1004/uwp-desktop/master/uwp-desktop.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/ljw1004/uwp-desktop/master/UwpDesktopAnalyzer/nupkg/uwp-desktop.png</iconUrl>
     <description>Lets you call into WinRT APIs from Desktop and Centennial apps (WPF, WinForms, ...)</description>
     <summary>Lets you call into WinRT APIs from Desktop apps</summary>
     <tags>UWP Win10 winrt UAP Centennial</tags>
