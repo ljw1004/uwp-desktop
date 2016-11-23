@@ -2,9 +2,9 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>UwpDesktop</id>
-    <version>10.0.10240.2</version>
+    <version>10.0.10240.3</version>
     <title>UWP for Desktop</title>
-    <authors>Lucian Wischik</authors>
+    <authors>Vladimir Postel</authors>
     <owners>Lucian Wischik</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>https://github.com/ljw1004/uwp-desktop/blob/master/LICENSE</licenseUrl>

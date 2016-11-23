@@ -18,7 +18,7 @@ class Program
     static void Main()
     {
         var forbiddenClasses = new HashSet<string>(File.ReadAllLines("ForbiddenClasses.txt"));
-        var allWinmdTypes = ReadAllWinmdTypesAndStaticMethods("10586");
+        var allWinmdTypes = ReadAllWinmdTypesAndStaticMethods("14393");
         foreach (var w in allWinmdTypes)
         {
             var qualifiedName = w.Namespace + "." + w.Name;
